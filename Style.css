@@ -1,0 +1,113 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(to right top, #c0c9d7, #899ca3, #5c706f, #39453e, #1b1e14);
+    overflow: hidden;
+}
+
+.main {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.main>.row>h1 {
+    display: flex;
+    align-items: center;
+    font-size: 45px;
+    font-weight: 500;
+    margin-bottom: 40px;
+    margin-top: 40px;
+    color: #1b1e14;
+    letter-spacing: 1px;
+}
+
+.WorldClock {
+    width: 70px;
+    height: 70px;
+}
+
+.row {
+    width: 600px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    flex-wrap: wrap;
+    background-color: #c0c9d7;
+    backdrop-filter: blur(40px);
+    border-radius: 10px;
+}
+
+#ct {
+    /* border: 1px solid red; */
+    font-size: 25px;
+    font-weight: 500;
+    color: #1b1e14;
+    margin-top: 30px;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+select {
+    width: 80%;
+    color: #fff;
+    background: #39453e;
+    height: 50px;
+    padding: 0 20px;
+    outline: none;
+    border: none;
+    border-radius: 35px;
+    appearance: none;
+    background-image: url(img/dropdown.png);
+    background-repeat: no-repeat;
+    background-size: 15px;
+    background-position-x: calc(100% - 20px);
+    background-position-y: 20px;
+}
+
+.icon {
+    width: 50px;
+    cursor: pointer;
+}
+
+/* Small Devices (Portrait Tablets and Large Phones, 576px - 767px) */
+@media (min-width: 576px) and (max-width: 767px) {
+    .row {
+        width: 500px;
+    }
+    #ct {
+        font-size: 20px;       
+    }
+}
+
+/* Extra Small Devices (Phones, < 576px) */
+@media (max-width: 575px) {
+
+    .row {
+        width: 350px;
+    }
+
+    .main>.row>h1 {
+        font-size: 35px;
+    }
+
+    .WorldClock {
+        width: 50px;
+        height: 50px;
+    }
+
+    #ct {
+        font-size: 14px;       
+    }
+}
